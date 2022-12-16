@@ -10,7 +10,7 @@ describe('Read notification', () => {
 
     const notification = makeNotification();
 
-    notificationsRepository.create(notification);
+    await notificationsRepository.create(notification);
 
     await readNotification.execute({
       notificationId: notification.id,
